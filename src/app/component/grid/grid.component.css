@@ -1,0 +1,17 @@
+.container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.ag-theme-alpine {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
