@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ColDef } from 'ag-grid-community';
-import { ClientSideRowModelModule } from 'ag-grid-community';
+import { ColDef } from 'ag-grid-community';  
 import { Module } from 'ag-grid-community';
+import { ClientSideRowModelModule } from 'ag-grid-community';
 
 @Component({
   selector: 'app-grid',
@@ -11,6 +11,8 @@ import { Module } from 'ag-grid-community';
 })
 export class GridComponent implements OnInit {
   public modules: Module[] = [ClientSideRowModelModule];
+  rowData: any[] = [];
+  originalRowData: any[] = [];
 
   columnDefs: ColDef[] = [
     { headerName: 'ID', field: 'id', sortable: true, filter: true },
@@ -21,9 +23,6 @@ export class GridComponent implements OnInit {
     { headerName: 'Skill Proficiency', field: 'skill', cellRenderer: this.skillRenderer }
   ];
 
-  rowData: any[] = [];
-  originalRowData: any[] = [];
-
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
@@ -33,7 +32,7 @@ export class GridComponent implements OnInit {
   fetchEmployees() {
     this.http.get<any[]>('http://localhost:3000/employees').subscribe(data => {
       this.rowData = data;
-      this.originalRowData = [...data];
+      this.originalRowData = [...data]; 
     });
   }
 
@@ -51,6 +50,10 @@ export class GridComponent implements OnInit {
 
   onQuickFilterChanged(event: any) {
     const filterValue = event.target.value.toLowerCase();
-    this.rowData = filterValue ? this.originalRowData.filter(row => row.name.toLowerCase().includes(filterValue)) : [...this.originalRowData];
+    if (filterValue) {
+      this.rowData = this.originalRowData.filter((row) => row.name.toLowerCase().includes(filterValue));
+    } else {
+      this.rowData = [...this.originalRowData];
+    }
   }
 }
