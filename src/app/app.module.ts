@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'; // ✅ Import HttpClientModule
 import { AppComponent } from './app.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { GridComponent } from './component/grid/grid.component';
@@ -11,7 +12,8 @@ import { GridComponent } from './component/grid/grid.component';
   ],
   imports: [
     BrowserModule,
-    AgGridModule // Import AgGridModule
+    AgGridModule,
+    HttpClientModule // ✅ Add HttpClientModule here
   ],
   providers: [],
   bootstrap: [AppComponent]

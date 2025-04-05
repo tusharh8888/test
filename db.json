@@ -7,14 +7,8 @@
       { "id": 5, "name": "Ishaan", "age": 32, "phone": "567-890-1234", "stocks": 250, "skill": 85 },
       { "id": 6, "name": "Meera", "age": 29, "phone": "678-901-2345", "stocks": 180, "skill": 75 },
       { "id": 7, "name": "Rohan", "age": 27, "phone": "789-012-3456", "stocks": 220, "skill": 88 },
-      { "id": 8, "name": "Kavya", "age": 33, "phone": "890-123-4567", "stocks": 170, "skill": 65 },
-      { "id": 9, "name": "Arjun", "age": 26, "phone": "901-234-5678", "stocks": 190, "skill": 92 },
-      { "id": 10, "name": "Sanya", "age": 31, "phone": "012-345-6789", "stocks": 210, "skill": 78 },
-      { "id": 11, "name": "Aditya", "age": 34, "phone": "123-456-7891", "stocks": 240, "skill": 81 },
-      { "id": 12, "name": "Priya", "age": 29, "phone": "234-567-8902", "stocks": 260, "skill": 89 },
-      { "id": 13, "name": "Rahul", "age": 28, "phone": "345-678-9013", "stocks": 230, "skill": 77 },
-      { "id": 14, "name": "Sneha", "age": 30, "phone": "456-789-0124", "stocks": 280, "skill": 95 },
-      { "id": 15, "name": "Varun", "age": 35, "phone": "567-890-1235", "stocks": 300, "skill": 85 }
+      { "id": 8, "name": "Kavya", "age": 33, "phone": "890-123-4567", "stocks": 170, "skill": 65 }
+      
     ]
   }
   
